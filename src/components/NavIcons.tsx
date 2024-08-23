@@ -13,7 +13,7 @@ export default function NavIcons() {
 
   const handleProfile = () => {
     if (!isLoggedIn) {
-      router.push('/login')
+      // router.push('/login')
     }
     setIsProfileOpened(!isProfileOpened)
   }
@@ -28,7 +28,7 @@ export default function NavIcons() {
         onClick={handleProfile}
       />
       {isProfileOpened &&
-        <div className='absolute p-4 rounded-md top-12 left-0 text-sm shadow-[0_3px_10px_rgba(0,0,0,0.2)] z-20'>
+        <div className='absolute p-4 rounded-md top-12 left-0 text-sm bg-white shadow-[0_3px_10px_rgba(0,0,0,0.2)] z-20'>
           <Link href='/profile'>Profile</Link>
           <div className=''>Logout</div>
         </div>}
@@ -39,16 +39,16 @@ export default function NavIcons() {
         alt=''
         className='cursor-pointer'
       />
-      <div className='relative cursor-pointer'>
-      <Image
-        src={"/cart.png"}
-        width={22}
-        height={22}
-        alt=''
-        className='cursor-pointer'
-        onClick={() => { setIsCartOpened(!isCartOpened) }}
-      />
-      <div className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center'>1</div>
+      <div className='relative cursor-pointer' onClick={() => { setIsCartOpened(!isCartOpened) }}>
+        <Image
+          src={"/cart.png"}
+          width={22}
+          height={22}
+          alt=''
+          className='cursor-pointer'
+
+        />
+        <div className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center'>1</div>
       </div>
       {isCartOpened && <CartModal />}
 

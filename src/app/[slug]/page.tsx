@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import ProductImages from '../components/ProductImages'
-import CustomizeProducts from '../components/CustomizeProducts'
-import Add from '../components/Add'
+import ProductImages from '../../components/ProductImages'
+import CustomizeProducts from '../../components/CustomizeProducts'
+import Add from '../../components/Add'
 
 export default function page() {
   return (

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import Filter from '../components/Filter'
-import ProductList from '../components/ProductList'
+import Filter from '../../components/Filter'
+import ProductList from '../../components/ProductList'
 
 export default function ListPage() {
   return (
